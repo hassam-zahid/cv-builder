@@ -1,0 +1,6 @@
+### Server is already running 
+
+```
+kill -9 $(lsof -i tcp:3000 -t)
+
+```

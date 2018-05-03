@@ -1,0 +1,147 @@
+
+ja:
+  devise:
+    confirmations:
+      confirmed: 'アカウントを登録しました。'
+      send_instructions: 'アカウントの有効化について数分以内にメールでご連絡します。'
+      send_paranoid_instructions: "あなたのメールアドレスが登録済みの場合、本人確認用のメールが数分以内に送信されます。"
+    failure:
+      already_authenticated: 'すでにログインしています。'
+      inactive: 'アカウントが有効化されていません。メールに記載された手順にしたがって、アカウントを有効化してください。'
+      invalid: "%{authentication_keys} もしくはパスワードが不正です。"
+      locked: 'あなたのアカウントは凍結されています。'
+      last_attempt: 'あなたのアカウントが凍結される前に、複数回の操作がおこなわれています。'
+      not_found_in_database: "%{authentication_keys} もしくはパスワードが不正です。"
+      timeout: 'セッションがタイムアウトしました。もう一度ログインしてください。'
+      unauthenticated: 'アカウント登録もしくはログインしてください。'
+      unconfirmed: 'メールアドレスの本人確認が必要です。'
+    mailer:
+      confirmation_instructions:
+        subject: 'アカウントの有効化について'
+      reset_password_instructions:
+        subject: 'パスワードの再設定について'
+      unlock_instructions:
+        subject: 'アカウントの凍結解除について'
+      password_change:
+        subject: 'パスワードの変更について'
+    omniauth_callbacks:
+      failure: "%{kind} アカウントによる認証に失敗しました。理由：（%{reason}）"
+      success: "%{kind} アカウントによる認証に成功しました。"
+    passwords:
+      no_token: "このページにはアクセスできません。パスワード再設定メールのリンクからアクセスされた場合には、URL をご確認ください。"
+      send_instructions: 'パスワードの再設定について数分以内にメールでご連絡いたします。'
+      send_paranoid_instructions: "あなたのメールアドレスが登録済みの場合、パスワード再設定用のメールが数分以内に送信されます。"
+      updated: 'パスワードが正しく変更されました。'
+      updated_not_active: 'パスワードが正しく変更されました。'
+    registrations:
+      destroyed: 'アカウントを削除しました。またのご利用をお待ちしております。'
+      signed_up: 'アカウント登録が完了しました。'
+      signed_up_but_inactive: 'ログインするためには、アカウントを有効化してください。'
+      signed_up_but_locked: 'アカウントが凍結されているためログインできません。'
+      signed_up_but_unconfirmed: '本人確認用のメールを送信しました。メール内のリンクからアカウントを有効化させてください。'
+      update_needs_confirmation: 'アカウント情報を変更しました。変更されたメールアドレスの本人確認のため、本人確認用メールより確認処理をおこなってください。'
+      updated: 'アカウント情報を変更しました。'
+    sessions:
+      signed_in: 'ログインしました。'
+      signed_out: 'ログアウトしました。'
+      already_signed_out: '既にログアウト済みです。'
+    unlocks:
+      send_instructions: 'アカウントの凍結解除方法を数分以内にメールでご連絡します。'
+      send_paranoid_instructions: 'アカウントが見つかった場合、アカウントの凍結解除方法を数分以内にメールでご連絡します。'
+      unlocked: 'アカウントを凍結解除しました。'
+  errors:
+    messages:
+      already_confirmed: 'は既に登録済みです。ログインしてください。'
+      confirmation_period_expired: "の期限が切れました。%{period} までに確認する必要があります。 新しくリクエストしてください。"
+      expired: 'の有効期限が切れました。新しくリクエストしてください。'
+      not_found: 'は見つかりませんでした。'
+      not_locked: 'は凍結されていません。'
+      not_saved:
+        one: "エラーが発生したため %{resource} は保存されませんでした:"
+        other: "%{count} 件のエラーが発生したため %{resource} は保存されませんでした:"
+  profile:
+    full_name: 'フルネーム'
+    skype: "Skype"
+    phone_number: '電話番号'
+    address: '住所'
+    linked_in: 'リンク先'
+    dob: '生年月日'
+    male: '男性'
+    female: '女性'
+    gender: '性別'
+    change_language: '言語を変えてください'
+    recovery_email_instructions: '復旧メールはあなたの履歴書には表示されません'
+    update_profile: 'プロフィールを更新'
+    profile_is_updated: 'プロファイルが更新されます。'
+    update_category: 'カテゴリの更新'
+    category_list: 'カテゴリ一覧'
+    category_instructions: 'あなたのカテゴリー/職業を選択または入力してください。'
+    image_will_show_on_resume: 'この画像は履歴書に表示されます'
+  generic:
+    select_language: '言語を選択する'
+    choose_file: 'ファイルを選ぶ'
+    choose_image: 'イメージを選択'
+    email: 'Eメール'
+    recovery_email: '復旧メール'
+    some_thing_went_wrong: '何かが間違っていました。もう一度やり直してください！'
+    invalid_user: '無効なユーザー'
+    category_is_updated: 'カテゴリが更新されました！'
+    invalid_category: '無効なカテゴリ'
+    valid_category: 'カテゴリは有効です'
+    close: '閉じる'
+    invalid_request: '無効なリクエスト'
+    valid_request: '有効なリクエスト'
+    password: "パスワード"
+    confirm_password: "パスワードを認証する"
+  notifications:
+    successfully_updated: '正常に更新されました'
+    sorry: 'ごめんなさい'
+  navbar:
+    home: 'ホーム'
+    templates: 'テンプレート'
+    profile: 'プロフィール'
+    support: 'サポート'
+    account: 'アカウント'
+    logout: 'ログアウト'
+  landing_page:
+    login: 'ログイン'
+    contact_us: 'お問い合わせ'
+  resume:
+    invalid_resume_request: '無効な再開リクエスト'
+    profile: 'プロフィール'
+    experiences: '経験'
+    skills: '技能'
+    interests: 'インタレスト'
+    education: '教育'
+    certificates: '証明書'
+    achievements: '実績'
+    templates: 'テンプレート'
+    title_is_updated: 'タイトルが更新されました！'
+    update_title: 'タイトルの更新'
+    resume_deleted: "履歴書は削除されます"
+  job_experiences:
+    job_title: "職名"
+    company_name: "会社名"
+    start_date: "開始日"
+    end_date: "終了日"
+    description_title: "仕事の説明/プロジェクトの説明"
+    job_title_tool_tip: "職位/職位を選択または入力してください"
+    company_name_tool_tip: "会社名を選択または入力してください"
+    create_experience: "履歴書を作成する" 
+    add_more: "さらに追加"
+    company: "会社"
+    duration: "期間"
+    experience_added: "体験を追加"
+  session:
+    invalid_credentials: "資格情報が無効です。もう一度お試しください"
+    sign_in: "サインイン"
+    login: "ログイン"
+    login_with_facebook: "Facebookでログイン"
+    login_with_google: "Googleでログイン"
+    dont_have_account: "アカウントを持っていない？"
+    forget_password: "パスワードを忘れる"
+    signup: "サインアップ"
+    signup_with_facebook: "Facebookでサインアップ"
+    signup_with_google: "Googleと申し込む"
+  landing_page_messages:
+    create_your_professional_resume_today: "あなたのプロフェッショナルレジュメを今日作成してください！"

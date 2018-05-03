@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyString
+  achievement_date: 2017-12-02
+  resume: one
+  is_active: false
+
+two:
+  title: MyString
+  description: MyString
+  achievement_date: 2017-12-02
+  resume: two
+  is_active: false

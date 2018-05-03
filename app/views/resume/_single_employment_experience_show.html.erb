@@ -1,0 +1,23 @@
+<div class="card" style="margin-bottom: 1.5%;">
+<div class="card-block" style="padding-bottom: 0%;">
+<div id="employment_experience_main_<%= experience.id%>">
+		<span  style="position: absolute; right: 10px;">
+		 	<%= render 'resume/update_employment_experience', experience: experience %>
+			<a href="<%= destroy_employment_experience_path(:employment_experience_global_key => experience.global_key)%>"><button type="button" class="btn btn-outline-danger btn-sm" >Delete</button></a>
+		 </span>
+	<label class="title_color">
+		 <span class="badge badge-info"><%= experience.start_date.strftime('%a, %d %b %Y')%></span> - 
+		 <span class="badge badge-info"><%= experience.end_date.strftime('%a, %d %b %Y')%></span>
+		 
+	</label>
+	
+	<div id="show_job_title_and_company" style="color:#0275d8;font-size: 22px;margin-top: -9px;" >
+		<%= experience.job_title.name %> - <%= experience.company.name%>
+	</div>
+	<div id="show_job_discription">
+		<p style="overflow-wrap: break-word;"><%= experience.description%></p> 
+	</div>
+	
+</div>
+</div>
+</div>

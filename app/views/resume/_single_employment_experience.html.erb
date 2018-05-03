@@ -1,0 +1,70 @@
+
+    	<div>
+    		<%= form_tag('/create_employment_experience', remote: true, id: "emp_form_112") do -%>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label><%= t("job_experiences.job_title")%></label>
+                        <%= text_field_tag 'job_title', nil, :class=>"form-control", :list=>"job_titles", :minlength=>"3", :maxlength=>"100", :required => true %>
+                        <small class="form-text text-muted"><%= t("job_experiences.job_title_tool_tip")%></small>
+                    </div> 
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label><%= t("job_experiences.company_name")%></label>
+                        <%= text_field_tag 'company_name', nil, :class=>"form-control", :list=>"companies_names", :minlength=>"3", :maxlength=>"100", :required => true %>
+                        <small class="form-text text-muted"><%= t("job_experiences.company_name_tool_tip")%></small>
+                    </div> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label><%= t("job_experiences.start_date")%></label>
+                    <%= text_field_tag 'start_date', nil, :class=> "form-control", :'data-provide'=>'datepicker', :required => true , :data => {:provide => 'datepicker', 'date-format' => 'yyyy-mm-dd', 'date-autoclose' => 'true'} %>
+                    <small id="emailHelp" class="form-text text-muted">yyyy-mm-dd</small>
+                </div>
+                <div class="col-sm-6">
+                    <label><%= t("job_experiences.end_date")%></label>
+                    <%= text_field_tag 'end_date', nil, :class=> "form-control", :'data-provide'=>'datepicker', :required => true , :data => {:provide => 'datepicker', 'date-format' => 'yyyy-mm-dd', 'date-autoclose' => 'true'} %>
+                    <small id="emailHelp" class="form-text text-muted">yyyy-mm-dd</small>
+                </div>
+            </div>
+            <div id="discription_box" style="margin-top: 2%;">
+                <label><%= t("job_experiences.description_title")%></label>
+                <%= text_area_tag 'description', nil, :class=> "form-control", :rows => "4", :minlength=>"3", :maxlength=>"500", :required => true %>
+                <%= hidden_field_tag 'resume_global_key', @resume.global_key %>
+            </div>
+            <div id="create_experience_button" style="margin-top: 2%;">
+                <%= submit_tag t("job_experiences.create_experience"), :class=>"btn btn-outline-primary"%>
+                <% end %>
+                <button type="button" class="btn btn-outline-danger" id="close_resume_div"><%= t("generic.close")%></button>
+            </div>
+    		
+    	</div>
+
+
+
+<datalist id="job_titles">
+  <% @job_titles.each do |name|%>
+    <option value="<%= name %>">
+  <% end %>
+</datalist>
+
+<datalist id="companies_names">
+  <% @companies.each do |name|%>
+    <option value="<%= name %>">
+  <% end %>
+</datalist>
+
+
+<script>
+    $( "#close_resume_div" ).click(function() {
+        $( "#create_exp_125" ).hide();
+        $("#create_exp_999").show();
+    });
+
+     $( "#add_exp_65665" ).click(function() {
+        $( "#create_exp_125" ).show();
+        $("#create_exp_999").hide();
+    });
+</script>

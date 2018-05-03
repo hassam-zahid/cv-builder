@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CvBuilder</title>
+    <%= favicon_link_tag asset_path('navbar_logo.png'), :rel => 'icon', :type =>  'image/png' %>
+    <%= csrf_meta_tags %>
+    
+    <!-- Bootstrap Start -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <!-- Bootstrap End -->
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+  </head>
+
+  <body>
+  
+    <%= alert %>
+     <%= notice %>
+    <% if user_signed_in? && current_user.role.name == 'super_admin'%>
+      <%= render 'navbar/admin_navbar' %>
+    <% else %>
+      <%= render 'navbar/user_navbar' if user_signed_in?%>
+    <% end %>
+    <br>
+       <div class="card container" id="color-scheme">
+            <div class="card-body" style="padding-top: 2%;padding-bottom: 2%;">
+                <%= yield %>
+            </div>
+        </div>
+        <div id="spinner" style="display: none;">
+          <%= image_tag('spinner.gif', :id => 'img-spinner', :class=>"stretch", :alt => 'loading')%>
+        </div>
+    <script>
+      $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
+    <script>
+      $("#profile_form_44,#cat_form_112").submit(function(){
+      show_spinner();
+      $('#notify_121').empty();
+      $('#notify_122').empty();
+      hide_spinner();
+    });
+    </script>
+
+    <script>
+      function hide_spinner(){
+        setTimeout(
+          function() 
+            {
+             $('#spinner').hide();
+            }, 700);
+        }
+
+      function show_spinner(){
+        $('#spinner').show();
+      }
+    </script>
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
+  </body>
+</html>

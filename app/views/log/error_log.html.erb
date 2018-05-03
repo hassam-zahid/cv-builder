@@ -1,0 +1,17 @@
+<center>
+	<h1>
+		SENTRY
+	</h1>
+</center>
+<hr>
+<div>
+	<% @errors.reverse.each do |error| %>
+		<div>
+			<p><%= error.error_place%></p>
+			<p><%= error.error_class%></p>
+			<p><%= error.error_message%></p>
+			<p><%= error.created_at%></p>
+			<hr>
+		</div>
+	<% end %>
+</div>

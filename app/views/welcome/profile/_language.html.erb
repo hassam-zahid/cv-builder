@@ -1,0 +1,27 @@
+<label><%= t("profile.change_language")%></label> <br>
+<div class="btn-group" data-toggle="buttons">
+  <% @languages.each do |language| %>
+  	<% if language[:id] == @user_language_id%>
+  		<label class="btn btn-secondary active">
+    		<input type="radio" name="language" id="<%= language[:id]%>" value="<%= language[:id]%>" autocomplete="off" checked><%= language[:name] %> 
+  		</label>
+  	<% else %>
+  		<label class="btn btn-secondary">
+    		<input type="radio" name="language" id="<%= language[:id]%>" value="<%= language[:id]%>" autocomplete="off" > <%= language[:name] %>
+  		</label>
+  	<% end %>
+  <% end %>
+ 
+
+</div>
+
+
+<script>
+	
+
+    $('input[name=language]').change(function(){
+      $('#spinner').show();
+		  selected_value = $("input[name='language']:checked").val();
+		  window.location.href = "/update_language?id="+selected_value;
+	});
+</script>

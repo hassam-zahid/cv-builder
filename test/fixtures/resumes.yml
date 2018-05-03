@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  experience: MyString
+  profile: one
+  image_id: 1
+  is_active: false
+
+two:
+  title: MyString
+  experience: MyString
+  profile: two
+  image_id: 1
+  is_active: false

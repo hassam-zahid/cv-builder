@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  fixed_by: 1
+  is_active: false
+  priority: 1
+
+two:
+  name: MyString
+  description: MyText
+  fixed_by: 1
+  is_active: false
+  priority: 1

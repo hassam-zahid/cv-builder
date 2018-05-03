@@ -1,0 +1,17 @@
+
+<% if params[:status] == true %>
+	<div class="alert alert-success alert-dismissible fade show" role="alert" style="padding-top: 0.45rem;padding-bottom: 0.45rem;">
+  		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    		<span aria-hidden="true">&times;</span>
+  		</button>
+  		<%= params[:message] %>
+	</div>
+
+<% else %>
+	<div class="alert alert-warning alert-dismissible fade show" role="alert"  style="padding-top: 0.50rem;padding-bottom: 0.50rem;">
+  		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    		<span aria-hidden="true">&times;</span>
+  		</button>
+  		<%= params[:message] %>
+	</div>
+<% end %>

@@ -1,0 +1,49 @@
+
+<% if page == 'login'%>
+	<div style="margin-top: 5%;">
+			<center>
+				<a href="/users/auth/facebook" class="loginBtn loginBtn--facebook"><%= t("session.login_with_facebook")%></a>
+				<a href="/users/auth/google_oauth2" class="loginBtn loginBtn--google"><%= t("session.login_with_google")%></a>
+			</center>
+	</div>
+	
+	<div id="ll_login" style="margin: 0px 220px; padding-bottom: 80px;">
+		<hr>
+
+		<%= form_tag('/login', :id => "l_login") do -%>
+			<%= email_field_tag 'email', '',:id => 'login_email', :class=>"w3-input w3-padding-16 w3-border", :placeholder => t("generic.email"), :required => true%><br>
+			<%= password_field_tag 'password', '',:id => 'login_password', :class=>"w3-input w3-padding-16 w3-border", :placeholder => t("generic.password") , :required => true, :maxlength=>"20", :minlength=>"6" %><br>
+  			<%= submit_tag t("session.login") , :class=>"w3-button mn_color", :style => "color:white;border-radius: 4px;" %>
+  			<a onclick="document.getElementById('login_modal').style.display='none'; document.getElementById('signup_modal').style.display='block'" class="w3-button" ><%= t("session.dont_have_account")%></a>
+		<% end -%>
+
+    
+	</div>
+    
+        
+<% elsif page == 'signup' %>
+	<div style="margin-top: 3%;">
+			<center>
+				<a href="/users/auth/facebook" class="loginBtn loginBtn--facebook"><%= t("session.signup_with_facebook")%></a>
+				<a href="/users/auth/google_oauth2" class="loginBtn loginBtn--google"><%= t("session.signup_with_google")%></a>
+			</center>
+	</div>
+	
+	<div id="ll_login" style="margin: 0px 220px; padding-bottom: 35px;">
+		<hr>
+
+		<%= form_tag('/create_user', :id => "l_signup") do -%>
+			<%= email_field_tag 'email', '', :class=>"w3-input w3-padding-16 w3-border", :placeholder => t("generic.email"), :required => true%><br>
+			<%= password_field_tag 'password', '', :class=>"w3-input w3-padding-16 w3-border", :placeholder => t("generic.password") , :required => true, :maxlength=>"20", :minlength=>"6" %><br>
+			<%= password_field_tag 'confirm_password', '', :class=>"w3-input w3-padding-16 w3-border", :placeholder => t("generic.confirm_password") , :required => true, :maxlength=>"20", :minlength=>"6" %><br>
+  			<%= submit_tag t("session.signup"), :class=>"w3-button mn_color", :style => "color:white;border-radius: 4px;" %>
+  			<a onclick="document.getElementById('signup_modal').style.display='none'; document.getElementById('login_modal').style.display='block'" class="w3-button" ><%= t("session.login")%></a>
+		<% end -%>
+
+    
+	</div>
+    
+<% end %>
+
+
+

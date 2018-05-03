@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  degree: one
+  resume: one
+  degree_year: 2017-12-02
+
+two:
+  degree: two
+  resume: two
+  degree_year: 2017-12-02

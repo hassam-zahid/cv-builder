@@ -1,0 +1,5 @@
+hide_spinner();
+$('#notify_121').empty();
+$('#notify_122').empty();
+$('#notify_121').html('<%=  escape_javascript(render :partial => 'layouts/notify.html.erb', :locals => {:params => @notify}) %>');
+$('#notify_122').html('<%=  escape_javascript(render :partial => 'layouts/notify.html.erb', :locals => {:params => @notify}) %>');

@@ -1,0 +1,10 @@
+
+<% @templates.each do |template| %>
+<a href="<%= show_template_path(:template_global_key => template.global_key, :resume_global_key => @resume.global_key) %>" target="_blank">
+ <img src="<%=template.image.url(:extra)%>" style="border: 2px solid #f7f5f5;padding: 5px;margin: 5px;height : 300px;" >
+</a>
+<% end %>
+
+
+
+

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  key: MyString
+  value: MyString
+  category: MyString
+  logs: MyString
+  is_active: false
+
+two:
+  key: MyString
+  value: MyString
+  category: MyString
+  logs: MyString
+  is_active: false

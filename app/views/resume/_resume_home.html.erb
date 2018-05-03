@@ -1,0 +1,32 @@
+
+<div style="padding: 0% 0% 1.5% 1%;">
+    <% if @resume_creation_flag %>
+            <%= render 'resume/is_allowed_resume_creation'%>
+    <% else %>
+        <%= render 'resume/is_blocked_resume_creation'%>
+    <% end %>
+</div>
+<div class="row">
+        <div style="padding-left: 4%;">
+        <% @resumes.each do |resume| %>
+            
+                <a style="margin: 0%; text-decoration: none;" data-toggle="tooltip" data-placement="bottom" title="<%= resume.title%>">
+                 <!--<%= image_tag 'resume1.png', :class => "card-img-top", :style=>"height:120px;" %> -->
+                 <div class="card" style="width: 30rem;">
+                    <div class="card-block">
+                        <a href="<%= resume_path(:global_key => resume.global_key)%>" style="text-decoration: none;">
+                            <h3 class="card-title"><%= resume.title %></h3>
+                        </a>
+                        <p class="card-text">Created : <%= resume.created_at.strftime('%a %d %b %Y')  %></p>
+                        <a href="<%= resume_path(:global_key => resume.global_key)%>"><button type="button" class="btn btn-primary btn-sm">Update</button></a>
+                        <a href="<%= delete_resume_path(:resume_global_key => resume.global_key)%>"><button type="button" class="btn btn-danger btn-sm">Delete</button></a>
+                    </div>
+                </div>
+                </a>
+                <br>
+        <% end %>
+        </div>
+</div>
+
+
+

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  global_key: MyString
+  description: MyString
+  category: one
+
+two:
+  name: MyString
+  global_key: MyString
+  description: MyString
+  category: two

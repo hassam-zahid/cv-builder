@@ -1,0 +1,87 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-outline-info btn-sm" data-toggle="modal" data-target="#exp_update_<%= experience.global_key%>">
+Update
+</button>
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="exp_update_<%= experience.global_key%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle_<%= experience.global_key%>" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #<%= $HEADER_COLOR%>">
+        <h5 class="modal-title" id="exampleModalLongTitle_<%= experience.global_key%>"><%= experience.job_title.name%></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       
+      <div>
+        <%= form_tag('/update_employment_experience', id: "emp_form_update_121") do -%>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label><%= t("job_experiences.job_title")%></label>
+                        <%= text_field_tag 'job_title', nil, :class=>"form-control", :list=>"job_titles_update", :minlength=>"3", :maxlength=>"100", :required => true, :value => experience.job_title.name %>
+                        <small class="form-text text-muted"><%= t("job_experiences.job_title_tool_tip")%></small>
+                    </div> 
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label><%= t("job_experiences.company_name")%></label>
+                        <%= text_field_tag 'company_name', nil, :class=>"form-control", :list=>"companies_names_update", :minlength=>"3", :maxlength=>"100", :required => true, :value => experience.company.name %>
+                        <small class="form-text text-muted"><%= t("job_experiences.company_name_tool_tip")%></small>
+                    </div> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label><%= t("job_experiences.start_date")%></label>
+                    <%= text_field_tag 'start_date', nil, :class=> "form-control", :'data-provide'=>'datepicker', :required => true , :data => {:provide => 'datepicker', 'date-format' => 'yyyy-mm-dd', 'date-autoclose' => 'true'}, :value => experience.start_date %>
+                    <small id="emailHelp" class="form-text text-muted">yyyy-mm-dd</small>
+                </div>
+                <div class="col-sm-6">
+                    <label><%= t("job_experiences.end_date")%></label>
+                    <%= text_field_tag 'end_date', nil, :class=> "form-control", :'data-provide'=>'datepicker', :required => true , :data => {:provide => 'datepicker', 'date-format' => 'yyyy-mm-dd', 'date-autoclose' => 'true'}, :value => experience.end_date %>
+                    <small id="emailHelp" class="form-text text-muted">yyyy-mm-dd</small>
+                </div>
+            </div>
+            <div id="discription_box" style="margin-top: 2%;">
+                <label><%= t("job_experiences.description_title")%> </label>
+                <%= text_area_tag 'description', experience.description, :class=> "form-control", :rows => "4", :minlength=>"3", :maxlength=>"500", :required => true %>
+            </div>
+            <%= hidden_field_tag 'resume_global_key', experience.resume.global_key%>
+            <%= hidden_field_tag 'exp_global_key', experience.global_key%>
+            <div id="update_experience_button" style="margin-top: 2%;">
+                <%= submit_tag t("job_experiences.create_experience"), :class=>"btn btn-outline-primary"%>
+                <% end %>
+               
+            </div>
+        
+      </div>
+
+
+
+<datalist id="job_titles_update">
+  <% JobTitle.names.each do |name|%>
+    <option value="<%= name %>">
+  <% end %>
+</datalist>
+
+<datalist id="companies_names_update">
+  <% Company.names.each do |name|%>
+    <option value="<%= name %>">
+  <% end %>
+</datalist>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

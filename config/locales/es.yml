@@ -1,0 +1,182 @@
+
+es:
+  errors:
+    messages:
+      expired: "ha expirado, por favor pide una nueva"
+      not_found: "no encontrado"
+      already_confirmed: "ya fue confirmada. Intenta ingresar."
+      not_locked: "no ha sido bloqueada"
+      not_saved:
+        one: "Ha habido 1 error:"
+        other: "Han habido %{count} errores:"
+
+  devise:
+    failure:
+      already_authenticated: 'Ya iniciaste sesión.'
+      unauthenticated: 'Tienes que registrarte o iniciar sesión antes de continuar.'
+      unconfirmed: 'Tienes que confirmar tu cuenta antes de continuar.'
+      locked: 'Tu cuente está bloqueada.'
+      invalid: 'Email o contraseña inválidos.'
+      invalid_token: 'Token de autentificación inválido.'
+      timeout: 'Tu sesión ha expirado. Inicia sesión nuevamente.'
+      inactive: 'Tu cuenta aun no ha sido activada.'
+    sessions:
+      signed_in: 'Iniciaste sesión correctamente.'
+      signed_out: 'Cerraste sesión correctamente.'
+    passwords:
+      send_instructions: 'Recibirás un email con instrucciones para reiniciar tu contraseña en unos minutos.'
+      updated: 'Tu contraseña fue cambiada correctamente. Has iniciado sesión.'
+      updated_not_active: 'Tu contraseña fue cambiada correctamente.'
+      send_paranoid_instructions: "Si tu email existe en el sistema, recibirás instrucciones para recuperar tu contraseña en él"
+    confirmations:
+      send_instructions: 'Recibirás instrucciones para confirmar tu cuenta en tu email en unos minutos.'
+      send_paranoid_instructions: 'Si tu email existe en el sistema, recibirás instrucciones para confirmar tu cuenta en tu email en unos minutos.'
+      confirmed: 'Tu cuenta fue confirmada. Has iniciado sesión.'
+    registrations:
+      signed_up: 'Bienvenido! Te has registrado correctamente.'
+      signed_up_but_unconfirmed: 'Te hemos enviado un email con instrucciones para que confirmes tu cuenta.'
+      signed_up_but_inactive: 'Te has registrado correctamente, pero tu cuenta aun no ha sido activada.'
+      signed_up_but_locked: 'Te has registrado correctamente, pero tu cuenta está bloqueada.'
+      updated: 'Actualizaste tu cuenta correctamente.'
+      update_needs_confirmation: "Actualizaste tu cuenta correctamente, pero tenemos que revalidar tu email. Revisa tu correo para confirmar la dirección."
+      destroyed: 'Adiós, tu cuenta ha sido eliminada. Esperamos verte de vuelta pronto!'
+    unlocks:
+      send_instructions: 'Recibirás un email con instrucciones para desbloquear tu cuenta en unos minutos'
+      unlocked: 'Tu cuenta ha sido desbloqueada. Inicia sesión para continuar.'
+      send_paranoid_instructions: 'Si tu cuenta existe, recibirás instrucciones para desbloquear tu cuenta en unos minutos'
+    omniauth_callbacks:
+      success: 'Te autentificaste correctamente con tu cuenta de %{kind}.'
+      failure: 'No pudimos autentificar tu cuenta de %{kind} por la siguiente razón: %{reason}.'
+    mailer:
+      confirmation_instructions:
+        subject: 'Instrucciones de confirmación'
+      reset_password_instructions:
+        subject: 'Instrucciones de cambio de contraseña'
+      unlock_instructions:
+        subject: 'Instrucciones de desbloqueo'
+
+      email_changed:
+        subject: 'Correo electrónico cambiado'
+      password_change:
+        subject: 'Contraseña cambiada'
+    omniauth_callbacks:
+      failure: 'No pude autenticarte %{kind} porque \"%{reason}\".'
+      success: "Autenticado con éxito desde %{kind} cuenta."
+    passwords:
+      no_token: 'No puede acceder a esta página sin venir de un correo electrónico de restablecimiento de contraseña. Si proviene de un correo electrónico de restablecimiento de contraseña, asegúrese de haber utilizado la URL completa provista.'
+      send_instructions: 'Recibirá un correo electrónico con instrucciones sobre cómo restablecer su contraseña en unos minutos'
+      send_paranoid_instructions: 'Si su dirección de correo electrónico existe en nuestra base de datos, recibirá un enlace de recuperación de contraseña en su dirección de correo electrónico en unos minutos'
+      updated: 'Tu contraseña ha sido cambiada exitosamente. Ya has iniciado sesión'
+      updated_not_active: 'tu contraseña ha sido cambiada exitosamente'
+    registrations:
+      destroyed: '¡Adiós! Su cuenta ha sido cancelada exitosamente. Esperamos volver a verte pronto'
+      signed_up: '¡Bienvenido! Us Usted se ha registrado exitosamente'
+      signed_up_but_inactive: "'te has registrado exitosamente Sin embargo, no pudimos iniciar sesión porque su cuenta aún no está activada.'"
+      signed_up_but_locked: 'Usted se ha registrado exitosamente. Sin embargo, no pudimos iniciar sesión porque su cuenta está bloqueada.'
+      signed_up_but_unconfirmed: 'Se ha enviado un mensaje con un enlace de confirmación a su dirección de correo electrónico. Por favor, siga el enlace para activar su cuenta'
+      update_needs_confirmation: 'Actualizó su cuenta con éxito, pero necesitamos verificar su nueva dirección de correo electrónico. Verifique su correo electrónico y siga el enlace de confirmación para confirmar su nueva dirección de correo electrónico'
+      updated: 'Su cuenta ha sido actualizada exitosamente'
+    sessions:
+      signed_in: 'Firmado con éxito'
+      signed_out: "Signed out successfully."
+      already_signed_out: 'Firmado con éxito'
+    unlocks:
+      send_instructions: 'Recibirá un correo electrónico con instrucciones sobre cómo desbloquear su cuenta en unos minutos.'
+      send_paranoid_instructions: 'Si su cuenta existe, recibirá un correo electrónico con instrucciones sobre cómo desbloquearla en unos minutos.'
+      unlocked: 'Su cuenta ha sido desbloqueada con éxito.Por favor inicie sesión para continuar'
+  errors:
+    messages:
+      already_confirmed: 'ya fue confirmado, intente iniciar sesión'
+      confirmation_period_expired: 'debe confirmarse dentro de% {period}, solicite uno nuevo'
+      expired: 'ha expirado, solicite uno nuevo'
+      not_found: 'extraviado'
+      not_locked: 'no estaba bloqueado'
+      not_saved:
+        one: '1 error que prohíbe que se guarde este% {resource}:'
+        other: '% {count} errors prohibió que se guarde este% {resource}:'
+  profile:
+    full_name: 'Nombre completo'
+    skype: "Skype"
+    phone_number: 'Número de teléfono'
+    address: 'Dirección'
+    linked_in: 'Vinculado en'
+    dob: 'Fecha de nacimiento'
+    male: 'Masculino'
+    female: 'Hembra'
+    gender: 'Género'
+    change_language: 'Cambiar idioma'
+    recovery_email_instructions: 'El correo electrónico de recuperación nunca aparecerá en tus hojas de vida'
+    update_profile: 'Actualización del perfil'
+    profile_is_updated: 'El perfil está actualizado'
+    update_category: 'Categoría de actualización'
+    category_list: 'Lista de categoría'
+    category_instructions: 'Lista de categoríaElija o ingrese su categoría / profesión'
+    image_will_show_on_resume: 'Esta imagen se mostrará en el curriculum vitae'
+  generic:
+    select_language: 'Seleccione el idioma'
+    choose_file: 'Elija el archivo'
+    choose_image: 'Elegir imagen'
+    email: "Email"
+    recovery_email: 'Correo electrónico de recuperación'
+    some_thing_went_wrong: '¡Algo salió mal. Por favor, vuelva a intentarlo!'
+    invalid_user: 'Usuario invalido'
+    category_is_updated: 'La categoría esta actualizada!'
+    invalid_category: 'Categoría inválida'
+    valid_category: 'La categoría es válida'
+    close: 'Cerca'
+    invalid_request: 'Solicitud no válida'
+    valid_request: 'Solicitud válida'
+    password: "Contraseña"
+    confirm_password: "Confirmar contraseña"
+  notifications:
+    successfully_updated: 'Actualizado exitosamente'
+    sorry: 'Lo siento'
+  navbar:
+    home: 'Casa'
+    templates: 'Plantillas'
+    profile: 'Perfil'
+    support: 'Apoyo'
+    account: 'Cuenta'
+    logout: 'Cerrar sesión'
+  landing_page:
+    login: 'iniciar sesión'
+    contact_us: 'Contáctenos'
+  resume:
+    invalid_resume_request: 'Solicitud de currículum vitae inválida'
+    profile: 'Perfil'
+    experiences: 'Experiencias'
+    skills: 'Habilidades'
+    interests: 'Intereses'
+    education: 'Educación'
+    certificates: 'Certificados'
+    achievements: 'Logros'
+    templates: "Plantillas"
+    title_is_updated: 'El título esta actualizado!'
+    update_title: 'Título de actualización'
+    resume_deleted: "El curriculum vitae se elimina"
+  job_experiences:
+    job_title: "Título profesional"
+    company_name: "nombre de empresa"
+    start_date: "Fecha de inicio"
+    end_date: "Fecha final"
+    description_title: "Descripción del trabajo / Descripción de los proyectos"
+    job_title_tool_tip: "Elija o ingrese el título / cargo de su trabajo"
+    company_name_tool_tip: "Elige o ingresa el nombre de tu empresa"
+    create_experience: "Crear experiencia" 
+    add_more: "Añadir más"
+    company: "Empresa"
+    duration: "Duración"
+    experience_added: "Experiencia agregada"
+  session:
+    invalid_credentials: "Credenciales no válidas, intenta de nuevo"
+    sign_in: "Registrarse"
+    login: "Iniciar sesión"
+    login_with_facebook: "Iniciar sesión con Facebook"
+    login_with_google: "Inicia sesión con Google"
+    dont_have_account: "No tienes cuenta?"
+    forget_password: "Contraseña olvidada"
+    signup: "Regístrate"
+    signup_with_facebook: "Registrate con Facebook"
+    signup_with_google: "Registrarse con Google"
+  landing_page_messages:
+    create_your_professional_resume_today: "¡Crea tu CV profesional, hoy!"

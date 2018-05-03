@@ -1,0 +1,11 @@
+<%= form_tag('/update_resume_title', :remote => true) do -%>
+<div class="row">
+    <div class="col-sm-8">
+		<%= text_field_tag 'title', "" ,:value => @resume.title, :class=> "form-control", :maxlength=>"60", :required => true %>
+		<%= hidden_field_tag 'global_key', @resume.global_key %>
+	</div>
+	<div class="col-sm-2">
+  		<%= submit_tag t('resume.update_title'), :class=>"btn btn-outline-primary" %>
+  	</div>
+  </div>
+<% end -%>

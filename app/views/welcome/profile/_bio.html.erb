@@ -1,0 +1,134 @@
+<center>
+    <div id="notify_121" style="margin-top: 30px;padding: 0% 20%;">
+        
+    </div>
+    <div style="padding: 0% 30%;">
+    <%= form_for :user, url: profile_path, :html => {:id => "profile_form_44", multipart: true}, :remote => true do |f| %>
+        <label><%= t("generic.choose_image")%></label><br>
+        <a id="update_profile_image_a">
+        <% if current_user.user_image.exists? %>
+            <%= image_tag( current_user.user_image.url(:medium), :style => "height: 120px;max-width:180px", :id=>"profile_image_101")%>
+        <% else %>
+            <%= image_tag('user_missing_image.png', :style => "height: 120px;max-width:180px", :id=>"profile_image_101")%>
+        <% end %>
+        </a>
+        <br>
+        <br>
+        <%= f.file_field :user_image, :class => "form-control", accept: 'image/png,image/gif,image/jpeg' %>
+        <br>
+        
+            <label><%= t("profile.full_name")%></label>
+            <%= f.text_field :name, :class=> "form-control", :minlength=>"3", :maxlength=>"60", :required => true %>
+            <br>
+
+            <label><%= t("profile.phone_number")%></label>
+            <%= f.text_field :phone, :class=> "form-control", :minlength=>"3", :maxlength=>"20", :required => true %>
+            <br>
+
+            <label><%= t("profile.skype")%></label>
+            <%= f.text_field :skype, :class=> "form-control", :minlength=>"3", :maxlength=>"30" %>
+            <br>
+
+            <label><%= t("profile.linked_in")%></label>
+            <%= f.text_field :linked_in, :class=> "form-control", :maxlength=>"30" %>
+            <br>
+            
+            <label><%= t("profile.dob")%></label>
+            <%= f.text_field :dob, :class=> "form-control", :'data-provide'=>'datepicker', :data => {:provide => 'datepicker', 'date-format' => 'yyyy-mm-dd', 'date-autoclose' => 'true'} %>
+            <small id="emailHelp" class="form-text text-muted">yyyy-mm-dd</small>
+            <br>
+
+            <label><%= t("profile.gender")%> </label> &nbsp;&nbsp;
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-secondary <%= "active" if current_user.gender == 'male'%>">
+                    <input type="radio" name="user[gender]" id="user_gender" value="male" autocomplete="off" <%= "checked" if current_user.gender == 'male'%>"> <%= t("profile.male")%>
+                </label>
+                <label class="btn btn-secondary <%= "active" if current_user.gender == 'female'%>" ">
+                    <input type="radio" name="user[gender]" id="user_gender" value="female" autocomplete="off" <%= "checked" if current_user.gender == 'male'%>"> <%= t("profile.female")%>
+                </label>
+            </div>
+            <br>
+
+            <label><%= t("profile.address")%></label>
+            <%= f.text_area :address, :class=> "form-control", :rows=>"4", :maxlength=>"100", :minlength=>"3", :required => true %>
+            <br>
+
+            <label><%= t("generic.recovery_email")%></label>
+            <%= f.email_field :recovery_email, :class=> "form-control", :type=> "email", :maxlength=>"60", :required => true %>
+            <small id="emailHelp" class="form-text text-muted"><%= t("profile.recovery_email_instructions")%></small>
+           <br>
+            <%= f.submit t("profile.update_profile"), :class=>"btn btn-outline-primary"%>
+            
+    <% end %>
+    </div>
+
+    <div id="notify_122" style="margin-top: 30px;padding: 0% 20%;">
+        
+    </div>
+
+
+  
+    
+
+</center>
+
+
+
+
+<script>
+      //image preview 
+      function readURL(input) {
+            if (input.files && input.files[0]) {
+                  var reader = new FileReader();
+                  reader.onload = function(e) {
+                        $('#profile_image_101').attr('src', e.target.result);
+                  }
+                  reader.readAsDataURL(input.files[0]);
+            }
+      }
+      $("#user_user_image").change(function() {
+            readURL(this);
+      });
+</script>
+
+<script>
+    
+    $("#profile_form_44").submit(function(){
+        var name = $('#user_name').val();
+        $("#navbar-name").text(name);
+    });
+    
+</script>
+<br>
+<br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

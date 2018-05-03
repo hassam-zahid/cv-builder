@@ -1,0 +1,145 @@
+
+bn:
+  devise:
+    confirmations:
+      confirmed: "আপনার ইমেল ঠিকানা সফলভাবে নিশ্চিত করা হয়েছে।"
+      send_instructions: "আপনি কয়েক মিনিটের মধ্যে আপনার ইমেল ঠিকানা নিশ্চিত করার জন্যে নির্দেশাবলী সহ একটি ইমেল পাবেন।"
+      send_paranoid_instructions: "আপনার ইমেল ঠিকানা আমাদের ডাটাবেসের মধ্যে উপস্থিত থাকলে, আপনি কয়েক মিনিটের মধ্যে আপনার ইমেল ঠিকানা নিশ্চিত করার জন্যে নির্দেশাবলী সহ একটি ইমেল পাবেন।"
+    failure:
+      already_authenticated: "আপনি ইতিমধ্যে সাইন ইন করেছেন।"
+      inactive: "আপনার অ্যাকাউন্ট এখনো সক্রিয় হয়নি।"
+      invalid: "%{authentication_keys} বা পাসওয়ার্ড ভুল হয়েছে।"
+      locked: "আপনার অ্যাকাউন্ট লক করা আছে।"
+      last_attempt: "আপনার অ্যাকাউন্ট লক হওয়ার আগে আপনার আরও একটি চেষ্টা বাকি আছে।"
+      not_found_in_database: "%{authentication_keys} বা পাসওয়ার্ড ভুল হয়েছে।"
+      timeout: "আপনার অধিবেশনের মেয়াদ শেষ. অব্যাহত রাখার জন্য আবার সাইন ইন করুন."
+      unauthenticated: "আপনি চালিয়ে যাওয়ার আগে আপনার সাইন ইন বা সাইন আপ করতে হবে।"
+      unconfirmed: "আপনি চালিয়ে যাওয়ার আগে আপনার ইমেল ঠিকানা নিশ্চিত করতে হবে।"
+    mailer:
+      confirmation_instructions:
+        subject: "নিশ্চিতকরণ নির্দেশাবলী"
+      reset_password_instructions:
+        subject: "পাসওয়ার্ড রিসেট করার নির্দেশাবলী"
+      unlock_instructions:
+        subject: "আনলক করার নির্দেশাবলী"
+    omniauth_callbacks:
+      failure: "আপনি %{kind} থেকে এসেছেন, এটি প্রমান করা যায়নি কারন \"%{reason}\"."
+      success: "আপনার %{kind} থেকে আসা নিশ্চিত হয়েছে।"
+    passwords:
+      no_token: "আপনি পাসওয়ার্ড রিসেট ইমেইল থেকে আসা ছাড়া এই পৃষ্ঠায় প্রবেশ করতে পারবেন না। আপনি যদি পাসওয়ার্ড রিসেট ইমেইল থেকে এসে থাকেন, তাহলে নিশ্চিত করুন যে আপনি সম্পুর্ণ লিঙ্ক ব্যবহার করেছেন।"
+      send_instructions: "আপনি কয়েক মিনিটের মধ্যে আপনার পাসওয়ার্ড পুনরুদ্ধার নির্দেশাবলী সহ একটি ইমেল পাবেন।"
+      send_paranoid_instructions: "আপনার ইমেল ঠিকানা আমাদের ডাটাবেসের মধ্যে উপস্থিত থাকলে, আপনি কয়েক মিনিটের মধ্যে আপনার ইমেইল ঠিকানায় একটি পাসওয়ার্ড পুনরুদ্ধার লিঙ্ক পাবেন।"
+      updated: "আপনার পাসওয়ার্ড সফলভাবে পরিবর্তন করা হয়েছে. আপনি এখন সাইন ইন করেছেন।"
+      updated_not_active: "আপনার পাসওয়ার্ড সফলভাবে পরিবর্তন করা হয়েছে।"
+    registrations:
+      destroyed: "বিদায়! আপনার অ্যাকাউন্ট সফলভাবে বাতিল করা হয়েছে. আশা করি শীঘ্রই আপনি আবার আসবেন।"
+      signed_up: "স্বাগতম! আপনি সফলভাবে সাইন আপ করেছেন।"
+      signed_up_but_inactive: "আপনি সফলভাবে সাইন আপ করেছেন। যদিও আপনার অ্যাকাউন্ট এখনো সক্রিয় না হওয়ায়, আপনি সাইন ইন করতে পারবেন না।"
+      signed_up_but_locked: "আপনি সফলভাবে সাইন আপ করেছেন। যদিও আপনার অ্যাকাউন্ট লক থাকায় আপনি সাইন ইন করতে পারবেন না।"
+      signed_up_but_unconfirmed: "একটি নিশ্চিতকরণ লিঙ্ক সহ একটি বার্তা আপনার ইমেইল ঠিকানায় পাঠানো হয়েছে। আপনার অ্যাকাউন্ট সক্রিয় করার জন্য লিঙ্ক অনুসরণ করুন।"
+      update_needs_confirmation: "আপনি সফলভাবে আপনার একাউন্ট আপডেট করেছেন, কিন্তু আপনার নতুন ইমেইল ঠিকানা যাচাই করতে হবে. আপনার ইমেইল চেক করুন এবং আপনার নতুন ইমেইল ঠিকানা যাচাই করতে নিশ্চিতকরন লিঙ্কটি অনুসরণ করুন।"
+      updated: "আপনার অ্যাকাউন্ট সফলভাবে আপডেট করা হয়েছে।"
+    sessions:
+      signed_in: "সফলভাবে সাইন ইন করেছেন।"
+      signed_out: "সফলভাবে সাইন আউট করেছেন।"
+      already_signed_out: "সফলভাবে সাইন আউট করেছেন।"
+    unlocks:
+      send_instructions: "আপনি কয়েক মিনিটের মধ্যে আপনার অ্যাকাউন্ট আনলক করার জন্যে নির্দেশাবলী সহ একটি ইমেল পাবেন।"
+      send_paranoid_instructions: "আপনার অ্যাকাউন্ট উপস্থিত থাকলে, আপনি কয়েক মিনিটের মধ্যে এটি আনলক করার জন্যে নির্দেশাবলী সহ একটি ইমেল পাবেন।"
+      unlocked: "আপনার অ্যাকাউন্ট সফলভাবে উদ্ঘাটিত হয়েছে। চালিয়ে যাওয়ার জন্য সাইন ইন করুন।"
+  errors:
+    messages:
+      already_confirmed: "ইতিমধ্যে নিশ্চিত হয়েছে, সাইন ইন করার চেষ্টা করুন" 
+      confirmation_period_expired: "নিশ্চিত করা প্রয়োজন %{period} মধ্যে, একটি নতুন অনুরোধ করুন"
+      expired: "মেয়াদ শেষ হয়ে গেছে, একটি নতুন অনুরোধ করুন"
+      not_found: "খুঁজে পাওয়া যায় নি"
+      not_locked: "লক করা ছিল না"
+      not_saved:
+        one: "১ টি ভুলের কারনে এই %{resource} কে সংরক্ষিণ করা যাচ্ছে না:"
+        other: "%{count} টি ভুলের কারনে এই %{resource} কে সংরক্ষিণ করা যাচ্ছে না:"
+  profile:
+    full_name: 'পুরো নাম'
+    skype: 'স্কাইপ'
+    phone_number: 'ফোন নম্বর'
+    address: 'ঠিকানা'
+    linked_in: 'লিঙ্কড ইন'
+    dob: 'জন্ম তারিখ'
+    male: 'পুরুষ'
+    female: 'মহিলা'
+    gender: 'লিঙ্গ'
+    change_language: 'ভাষা পরিবর্তন করুন'
+    recovery_email_instructions: 'পুনরুদ্ধার ইমেল আপনার সারসংকলন দেখাতে হবে না'
+    update_profile: 'প্রফাইল হালনাগাদ'
+    profile_is_updated: 'প্রোফাইল আপডেট করা হয়েছে'
+    update_category: 'বিভাগ আপডেট করুন'
+    category_list: 'বিষয়শ্রেণী তালিকা'
+    category_instructions: 'আপনার বিভাগ / পেশা চয়ন বা প্রবেশ'
+    image_will_show_on_resume: 'এই ছবিটি পুনরায় চালু করা হবে'
+  generic:
+    select_language: 'ভাষা নির্বাচন কর'
+    choose_file: 'ফাইল পছন্দ কর'
+    choose_image: 'ছবিটি নির্বাচন করুন'
+    email: 'ইমেইল'
+    recovery_email: 'পুনরুদ্ধার ইমেল'
+    some_thing_went_wrong: 'কিছু ভুল হয়েছে আবার চেষ্টা করুন!'
+    invalid_user: 'অবৈধ ব্যবহারকারী'
+    category_is_updated: 'বিভাগ আপডেট করা হয়েছে!'
+    invalid_category: 'অবৈধ বিভাগ'
+    valid_category: 'বিভাগটি বৈধ'
+    close: 'ঘনিষ্ঠ'
+    invalid_request: 'অনুরোধ অগ্রহণযোগ্য'
+    valid_request: 'বৈধ অনুরোধ'
+    password: "পাসওয়ার্ড"
+    confirm_password: "পাসওয়ার্ড নিশ্চিত করুন"
+  notifications:
+    successfully_updated: 'সফলভাবে আপডেট!'
+    sorry: 'দুঃখিত'
+  navbar:
+    home: 'বাড়ি'
+    templates: 'টেমপ্লেট'
+    profile: 'প্রোফাইলের'
+    support: 'সমর্থন'
+    account: 'হিসাব'
+    logout: 'প্রস্থান'
+  landing_page:
+    login: 'লগইন'
+    contact_us: 'আমাদের সাথে যোগাযোগ করুন'
+  resume:
+    invalid_resume_request: 'অবৈধ পুনঃসূচনা অনুরোধ'
+    profile: 'প্রোফাইলের'
+    experiences: 'অভিজ্ঞতা'
+    skills: 'দক্ষতা'
+    interests: 'রুচি'
+    education: 'শিক্ষা'
+    certificates: 'সার্টিফিকেট'
+    achievements: 'কৃতিত্ব'
+    templates: 'টেমপ্লেট'
+    title_is_updated: 'শিরোনাম আপডেট করা হয়েছে!'
+    update_title: 'শিরোনাম আপডেট করুন'
+    resume_deleted: "পুনঃসূচনা মুছে ফেলা হয়েছে"  
+  job_experiences:
+    job_title: "কাজের শিরোনাম"
+    company_name: "কোমপানির নাম"
+    start_date: "শুরুর তারিখ"
+    end_date: "শেষ তারিখ"
+    description_title: "কাজের বর্ণনা / প্রকল্প বিবরণ"
+    job_title_tool_tip: "আপনার পেশা শিরোনাম বা অবস্থান বাছাই বা নির্বাচন করুন"
+    company_name_tool_tip: "আপনার কোম্পানির নাম বাছাই বা প্রবেশ করুন"
+    create_experience: "অভিজ্ঞতা তৈরি করুন" 
+    add_more: "আরো যোগ করো"
+    company: "কোম্পানির"
+    duration: "স্থিতিকাল"
+    experience_added: "অভিজ্ঞতা যোগ করা হয়েছে"
+  session:
+    invalid_credentials: "অবৈধ শংসাপত্রগুলি, আবার চেষ্টা করুন"
+    sign_in: "প্রবেশ কর"
+    login: "লগইন"
+    login_with_facebook: "ফেসবুকে লগইন করুন"
+    login_with_google: "Google এর সাথে লগইন করুন"
+    dont_have_account: "অ্যাকাউন্ট নেই?"
+    forget_password: "পাসওয়ার্ড ভুলে গেছেন"
+    signup: "নিবন্ধন করুন"
+    signup_with_facebook: "ফেসবুক দিয়ে সাইন আপ"
+    signup_with_google: "Google এর সাথে সাইন আপ করুন"
+  landing_page_messages:
+    create_your_professional_resume_today: "আপনার পেশাগত পুনঃসূচনা করুন, আজ!"

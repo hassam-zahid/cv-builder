@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  url: MyString
+  fetched_from: MyString
+  user: one
+  is_active: false
+
+two:
+  url: MyString
+  fetched_from: MyString
+  user: two
+  is_active: false

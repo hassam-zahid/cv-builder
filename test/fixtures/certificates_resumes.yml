@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  certificate: one
+  resume: one
+  certificate_year: 2017-12-02
+
+two:
+  certificate: two
+  resume: two
+  certificate_year: 2017-12-02

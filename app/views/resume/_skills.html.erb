@@ -1,0 +1,22 @@
+
+<div style="padding-top: 4%;margin-bottom: 15%;">
+	<div class="row">
+		<div class="col-sm-3">
+			<div  style="margin-bottom: 1%;">
+    			<h4>Professional Skills</h4>
+    		</div>
+		</div>
+    	<div class="col-sm-8">
+    		
+    		<%= form_tag('/update_professional_skills', :remote => true) do -%>
+    			<%= text_field_tag 'professioanl_skills', @skill_names, :'data-role'=>"tagsinput" %>
+    			<%= hidden_field_tag 'resume_global_key', @resume.global_key %>
+  				<input type="submit" name="commit" class="btn btn-outline-info btn-sm"  value="Update skills" data-disable-with="updating ....">
+			<% end -%>
+    	</div>
+    	<div class="col-sm-1">
+    	</div>
+	</div>
+</div>
+
+

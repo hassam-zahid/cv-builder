@@ -1,0 +1,55 @@
+
+
+
+
+
+
+<nav class="navbar navbar-toggleable-md navbar-light "  style="background-color: #a5983c;padding: 0px 30px 0px 20px;" >
+	<a class="navbar-brand" href="<%= home_path %>">
+    <img src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+  </a>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="<%= home_path%>">CV Builder</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link <%= 'active' if(params[:controller] == 'welcome' && params[:action] == 'index') %>" href="<%= home_path%>"><%= t("navbar.home")%></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link <%= 'active' if(params[:controller] == 'welcome' && params[:action] == 'profile') %>" href="<%= profile_path %>"><%= t("navbar.profile") %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<%= home_path%>"><%= t("navbar.templates")%></a>
+      </li>
+     
+       
+    </ul>
+    	<div class="btn-group" role="group">
+    <button id="navbar-name" type="button" style="background-color: #a5983c;"  class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <%= current_user.try(:name) || current_user.email %>
+    </button>
+   <div class="dropdown-menu dropdown-menu-right">
+    <%= link_to  t("navbar.profile"), profile_path, class: "dropdown-item" %>
+    <button class="dropdown-item" type="button"><%= t("navbar.support")%></button>
+    <button class="dropdown-item" type="button"><%= t("navbar.account")%></button>
+    <div class="dropdown-divider"></div>
+     <%= link_to( t("navbar.logout"), destroy_user_session_path, class: "dropdown-item", method: :delete) if user_signed_in? %> 
+  </div>
+  </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+

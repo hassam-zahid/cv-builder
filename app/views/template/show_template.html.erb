@@ -1,0 +1,26 @@
+
+
+<center style="margin: 1% 10%;">
+	<div style="background-color: <%= $HEADER_COLOR %>; margin: 0% 10% 0.3% 10%;padding: 1% 0%;">
+		<a href="<%= @template.template_project_url%>/download_pdf.pdf?data=<%= @resume_data %>" target="_blank">Download PDF</a>
+	</div>
+	<div id="show_template_div_121">
+		<div id="spinner_img">
+          <%= image_tag('spinner.gif', :id => 'img-spinner', :class=>"stretch", :alt => 'loading')%>
+        </div>
+		<iframe src="<%= @template.template_project_url%>/template_request?resume_global_key=<%= @resume_global_key%>&data=<%= @resume_data %>" style="visibility:visible;display: none;" id="resume_iframe_99" height="100%" width="100%"></iframe>
+	</div>
+</center>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	$( document ).ready(function() {
+   	setTimeout(
+          function() 
+            {
+             $('#spinner_img').hide();
+             $('#resume_iframe_99').show();
+            }, 1000);
+});
+</script>

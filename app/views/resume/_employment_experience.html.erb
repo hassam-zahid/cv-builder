@@ -1,0 +1,28 @@
+
+<div style="padding-top: 4%;margin-bottom: 15%;">
+	<div class="row">
+		<div class="col-sm-3">
+			<div id="create_exp_999" style="margin-bottom: 1%;">
+    			<button type="button" class="btn btn-outline-info" id="add_exp_65665"><%= t("job_experiences.create_experience")%></button>
+    		</div>
+		</div>
+    	<div class="col-sm-8">
+    		<div id="create_exp_125" style="display: none;">
+				<%= render 'resume/single_employment_experience'%>
+				<br>
+			</div>
+    		<div id="show_experiences_section">
+    			<% if @employment_experiences.count > 0 %>
+					<% @employment_experiences.each do |experience|%>
+						<%= render 'resume/single_employment_experience_show', experience: experience%>
+					<% end %>
+				<% end %>
+    		</div>
+    		
+    	</div>
+    	<div class="col-sm-1">
+    	</div>
+	</div>
+</div>
+
+

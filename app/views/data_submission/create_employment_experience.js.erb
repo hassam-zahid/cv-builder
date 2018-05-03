@@ -1,0 +1,10 @@
+$("#job_title,#company_name,#start_date,#end_date,#description").val("");
+hide_spinner();
+$('#notify_121').empty();
+$('#notify_122').empty();
+$('#exp_cp_ratio').empty();
+$('#exp_cp_ratio').html('<%=  escape_javascript(render :partial => 'resume/completion_ratio_tabs.html.erb', :locals => {:data => @completion_ratio}) %>');
+$('#notify_121').html('<%=  escape_javascript(render :partial => 'layouts/notify.html.erb', :locals => {:params => @notify}) %>');
+$('#notify_122').html('<%=  escape_javascript(render :partial => 'layouts/notify.html.erb', :locals => {:params => @notify}) %>');
+$('#show_experiences_section').prepend('<%=  escape_javascript(render :partial => 'resume/single_employment_experience_show', :locals => { experience: @employment_experience}) %>');
+$('#close_resume_div').click();
